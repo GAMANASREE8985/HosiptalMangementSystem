@@ -1,0 +1,30 @@
+:root {
+  --bg: #0b1220;
+  --card: #111a2b;
+  --text: #eaf0ff;
+  --muted: #9fb2d9;
+  --primary: #5b8cff;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, Arial; background: var(--bg); color: var(--text); }
+.layout { display: grid; grid-template-rows: 64px 1fr; min-height: 100vh; }
+.header { display:flex; align-items:center; padding:0 16px; background: rgba(255,255,255,0.02); border-bottom: 1px solid #1e2a44; }
+.header .spacer { flex:1; }
+.header .userbox { display:flex; gap:12px; align-items:center; }
+.header button { background: var(--primary); border:0; color:white; padding:8px 12px; border-radius:12px; cursor:pointer; }
+.body { display:grid; grid-template-columns: 220px 1fr; }
+.sidebar { display:flex; flex-direction:column; gap:8px; padding:16px; border-right:1px solid #1e2a44; }
+.sidebar a { color: var(--muted); text-decoration:none; padding:10px 12px; border-radius:12px; }
+.sidebar a.active, .sidebar a:hover { background: #192640; color: var(--text); }
+main { padding: 20px; }
+.card { background: var(--card); padding: 24px; border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+.auth { display:grid; place-items:center; height: calc(100vh - 64px); }
+.auth form { width: 420px; display:flex; flex-direction:column; gap:10px; }
+input, select { background:#0e1730; color:var(--text); border:1px solid #1e2a44; padding:10px 12px; border-radius:12px; }
+button { background: var(--primary); border:0; color:white; padding:10px 14px; border-radius:12px; cursor:pointer; }
+.table { width:100%; border-collapse: collapse; margin-top: 12px; }
+.table th, .table td { text-align:left; padding:10px; border-bottom:1px solid #1e2a44; }
+.grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+.kpi { background: var(--card); padding: 16px; border-radius: 16px; }
+.row { display:grid; grid-template-columns: repeat(5, 1fr) auto; gap:8px; margin-bottom: 12px; }
+.error { color: #ff8b8b; background: rgba(255,100,100,0.06); padding:8px; border-radius:8px; }
