@@ -4,8 +4,8 @@ import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
   const { login } = useAuth();
-  const [email, setEmail] = useState('admin@hms.local');
-  const [password, setPassword] = useState('Admin@123');
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const [err, setErr] = useState('');
   const nav = useNavigate();
 
